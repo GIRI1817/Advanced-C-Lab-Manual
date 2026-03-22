@@ -57,7 +57,7 @@ int main()
 <img width="1920" height="1200" alt="Screenshot 2026-03-18 083230" src="https://github.com/user-attachments/assets/878b7aa9-20c3-4c3c-ac2d-c9ba70504a45" />
 
 
-Result:
+## Result:
 Thus, the program is verified successfully. 
 
 
@@ -219,48 +219,22 @@ Use scanf to input the file name into the name array and the number of strings i
 ## Program:
 
 ```
-#include <stdio.h>
-
-int main()
+#include <stdio.h> int main()
 {
-    FILE *p;
-    char name[50], text[100];
-    int num, i;
+FILE *p;
+char name[20]; int num;
+char text[50]; scanf("%s%d",name,&num); p=fopen("name","w"); printf("%s Opened",name); for(int i=0;i<num;i++)
+{
+scanf("%s",text); fputs(text,p);
+}
+printf("\nData added Successfully");
 
-    printf("Enter file name: ");
-    scanf("%s", name);
-
-    printf("Enter number of strings: ");
-    scanf("%d", &num);
-
-    p = fopen(name, "w");
-
-    if (p == NULL)
-    {
-        printf("Error opening file\n");
-        return 1;
-    }
-
-    printf("File opened successfully\n");
-
-    for(i = 0; i < num; i++)
-    {
-        printf("Enter text: ");
-        scanf(" %[^\n]", text);
-        fputs(text, p);
-        fputs("\n", p);
-    }
-
-    fclose(p);
-
-    printf("Data added successfully\n");
-
-    return 0;
 }
 ```
 
 ## Output:
 
+<img width="499" height="259" alt="512652368-69fc7b54-eb0f-427b-acfd-b45132afa6cc" src="https://github.com/user-attachments/assets/fb2a9ac5-c8c9-46df-8849-dd3df1a1c863" />
 
 
 
@@ -367,5 +341,5 @@ int main()
 
 
 
-Result:
+## Result:
 Thus, the program is verified successfully
